@@ -11,6 +11,12 @@ type contactsServiceConfig struct {
 	Port int `json:"port"`
 }
 
+type contact struct {
+	FirstName string `json:"firstName"`
+	LastName string `json:"lastName"`
+	PhoneNumber string `json:"phoneNumber"`
+}
+
 func main() {
 	var cfg contactsServiceConfig
 	err := config.Load("./config.json", &cfg)
